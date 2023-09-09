@@ -1,6 +1,6 @@
 version = "0.0.1"
 
-project.extra["PluginName"] = "Unethical Kebab buyer"
+project.extra["PluginName"] = "Bruce's Kebab buyer"
 project.extra["PluginDescription"] = "Buys kebabs very quickly"
 
 tasks {
