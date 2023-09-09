@@ -8,7 +8,7 @@ import net.unethicalite.api.widgets.Dialog;
 import net.runelite.api.DialogOption;
 import net.runelite.api.ItemID;
 import net.runelite.api.NPC;
-import net.runelite.client.plugins.party.messages.StatusUpdate;
+
 public class BuyKebabs implements ScriptTask
 {
 	@Override
@@ -20,19 +20,7 @@ public class BuyKebabs implements ScriptTask
 	@Override
 	public int execute()
 	{
-		if (getRunEnergy() > 30) 
-		{
-			if (!Movement.isRunEnabled())
-			{
-				Movement.toggleRun();
-				return 1000;
-			}
 
-			if (Movement.isWalking())
-			{
-				return 1000;
-			}
-		}
 
 		NPC karim = NPCs.getNearest("Karim");
 		if (karim == null)
