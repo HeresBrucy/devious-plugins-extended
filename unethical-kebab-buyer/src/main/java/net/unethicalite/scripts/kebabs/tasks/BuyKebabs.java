@@ -20,15 +20,18 @@ public class BuyKebabs implements ScriptTask
 	@Override
 	public int execute()
 	{
-		if (!Movement.isRunEnabled())
+		if (getRunEnergy() > 30) 
 		{
-			Movement.toggleRun();
-			return 1000;
-		}
+			if (!Movement.isRunEnabled())
+			{
+				Movement.toggleRun();
+				return 1000;
+			}
 
-		if (Movement.isWalking())
-		{
-			return 1000;
+			if (Movement.isWalking())
+			{
+				return 1000;
+			}
 		}
 
 		NPC karim = NPCs.getNearest("Karim");
