@@ -11,7 +11,6 @@ import net.runelite.api.ItemID;
 import net.runelite.api.Player;
 import net.runelite.api.TileObject;
 import net.runelite.api.coords.WorldPoint;
-import net.runelite.client.plugins.party.messages.StatusUpdate;
 
 public class BankKebabs implements ScriptTask
 {
@@ -29,19 +28,6 @@ public class BankKebabs implements ScriptTask
 		Player local = Players.getLocal();
 		if (!Bank.isOpen())
 		{
-			if (getRunEnergy() > 30)
-			{
-				if (!Movement.isRunEnabled())
-				{
-					Movement.toggleRun();
-					return 1000;
-				}
-	
-				if (Movement.isWalking())
-				{
-					return 1000;
-				}
-			}
 			TileObject booth = TileObjects.getFirstAt(BANK_TILE, x -> x.hasAction("Bank", "Collect"));
 			if (booth == null || booth.distanceTo(local) > 20 || !Reachable.isInteractable(booth))
 			{
