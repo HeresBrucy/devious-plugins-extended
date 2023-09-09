@@ -8,7 +8,7 @@ import net.unethicalite.api.widgets.Dialog;
 import net.runelite.api.DialogOption;
 import net.runelite.api.ItemID;
 import net.runelite.api.NPC;
-
+import net.runelite.client.plugins.party.messages.StatusUpdate;
 public class BuyKebabs implements ScriptTask
 {
 	@Override
