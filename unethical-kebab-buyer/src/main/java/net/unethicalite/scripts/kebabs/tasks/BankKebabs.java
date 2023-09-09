@@ -29,7 +29,8 @@ public class BankKebabs implements ScriptTask
 		Player local = Players.getLocal();
 		if (!Bank.isOpen())
 		{
-			if (getRunEnergy() > 30):
+			if (getRunEnergy() > 30)
+			{
 				if (!Movement.isRunEnabled())
 				{
 					Movement.toggleRun();
@@ -40,7 +41,7 @@ public class BankKebabs implements ScriptTask
 				{
 					return 1000;
 				}
-
+			}
 			TileObject booth = TileObjects.getFirstAt(BANK_TILE, x -> x.hasAction("Bank", "Collect"));
 			if (booth == null || booth.distanceTo(local) > 20 || !Reachable.isInteractable(booth))
 			{
